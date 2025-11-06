@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    <!-- JDBC connection settings: switched to SQLite file DB for persistence across sessions -->
+    <property name="hibernate.connection.driver_class">org.sqlite.JDBC</property>
+    <property name="hibernate.connection.url">jdbc:sqlite:knights.db</property>
+
+    <!-- SQL dialect: use Hibernate community SQLite dialect -->
+    <property name="hibernate.dialect">org.hibernate.community.dialect.SQLiteDialect</property>
+
+    <!-- Echo all executed SQL to stdout -->
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.format_sql">true</property>
+
+    <!-- Create or update schema on startup so entities persist across runs -->
+    <property name="hibernate.hbm2ddl.auto">update</property>
+
+    <!-- Use JDBC batch size if desired -->
+    <property name="hibernate.jdbc.batch_size">20</property>
+
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,16 @@
+# Maven
+/target/
+
+# IDEA
+/.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# SQLite DB used locally for persistence during development
+knights.db
